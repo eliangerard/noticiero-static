@@ -2,86 +2,221 @@
     margin: 0;
     color:white;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    overflow: overlay;
 }
 body {
     background-color: rgb(29, 28, 29);
 }
-
 marquee {
+    font-size: 1vw;
     display: flex;
-    background-color: rgb(0, 13, 255);
+    background-color: rgb(43, 99, 255);
     color: white;
     padding: 0.5rem;
+    height: 1vw;
 }
 header {
     display: flex;
     justify-content: center;
+    background-color: rgb(0, 0, 0);
+    width: 100%;
     height: 20%;
-    background-color: rgb(48, 47, 50);
-    position: sticky;
     box-shadow: 0px 1px 3px 1px rgb(29, 28, 29);
     z-index: 5;
+    position: sticky;
+    top: 0;
 }
-.mainNew {
-    height: 60vh;
+.logo {
+    width: 20%;
+    padding: 0.5rem;
+}
+::-webkit-scrollbar {
+    width: 1vh;
+  }
+::-webkit-scrollbar-track {
+    background: #00000000;
+    box-shadow: 0px 1px 3px 1px rgb(29, 28, 29);
+}
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.041);
+    border-radius: 1vw;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.24);
+}
+
+.logo:hover {
+    cursor: pointer;
+}
+
+#leftMenu {
+    margin: 1vw 1.5vw 1vw 1vw;
+    float: left;
+    height: 100%;
+    width: 15%;
+    font-size: 1.5vw;
+}
+#center {
+    height: 100%;
+    margin: 0;
+    width: 65%;
+    float: left;
+}
+#right {
+    font-size: 1vw;
+    margin: 1vw 1.5vw 1vw 1vw;
+    float: left;
+    width: 10%;
+    height: 100%;
+    padding: 2vw;
+    border-radius: 1vw;
+    background-color: rgba(255, 255, 255, 0.041);
+}
+#profile{ 
+    padding: 2vw;
+    border-radius: 1vw;
+    background-color: rgba(255, 255, 255, 0.041);
+}
+#ppic {
+    border-radius: 100%;
+    width: 5vw;
+}
+#categories {
+    margin-top: 1vw;
+    padding: 2vw;
+    border-radius: 1vw;
+    background-color: rgba(255, 255, 255, 0.041);
+    height: 100%;
+}
+#mainNew {
+    height: 50vh;
+    margin: 1vw 0 2vw 0;
     display: flex;
     overflow: hidden;
     background-image: url("./src/main.webp");
-    background-color: rgba(3, 3, 3, 0.479);
-    background-size: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
     position: relative;
+    border-radius: 1vw;
+}
+#mainNew:hover{
+    cursor: pointer;
 }
 #mainBlur {
     width: 100%;
     height: 100%;
     margin: 0;
-    background-color: rgba(0, 0, 0, 0.374);
+    background: linear-gradient(0deg, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.3) 50%, rgba(0,0,0,0) 100%);;
     position: absolute;
 }
 #mainPush {
     display: block;
     margin-top: auto;
     z-index: 1;
-    padding: 2rem;
+    padding: 2vw;
+    width: 100%;
 }
 #mainTitle {
     bottom: 3rem;
-    font-size: 2rem;
+    font-size: 2.5vw;
     text-justify: auto;
-    text-shadow: 0px 1px 3px 1px rgb(29, 28, 29);
+}
+ul {
+    padding: 1vw 0 0 0;
+}
+li {
+    font-size: 1vw;
+    padding: 0.3vw 0;
+}
+li:hover{
+    cursor: pointer;
 }
 #mainCaption {
     bottom: 0rem;
-}
-.logo {
-    width: 15%;
-    padding: 1rem;
-}
-article {
-    display: flex;
-    margin: 4vw;
-    box-shadow: 0px 0px 10rem 1rem rgb(29, 28, 29);
-    border-width: 1rem;
-    height: 30%;
+    font-size: 1vw;
 }
 .news {
     float:left;
-    width: 60%;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
 }
-aside {
+
+.newsArticle {
+    margin: 1vw 1vw 1vw 0;
+    /*box-shadow: 0px 0px 1vw 1px rgba(0, 0, 0, 0.425);*/
+    border-width: 1rem;
+    height: 30%;
+    width: 28.5%;
+    padding: 1vw;
+    border-radius: 1vw;
+    background-color: rgba(255, 255, 255, 0.041);
+}
+.popArticle {
+    border-radius: 1vw;
+    padding: 1vw;
+    margin: 1vw 0;
+    background-color: rgba(255, 255, 255, 0.041);
+}
+.data {
+    font-style: italic;
+    font-weight: bold;
+    font-size: 1vw;
+    padding: 1vw 1vw 0 1vw;
+}
+.pData{
+    font-style: italic;
+    font-weight: bold;
+    font-size: 1vw;
+}
+.gnPlace {
+    color: rgb(133, 166, 255);
+    float: left;
+}
+.gnDate {
     float: right;
 }
 .gnImg {
-    float:left;
-    width: 20%;
+    position: relative;
+    width: 100%;
+    border-radius: 0.3vw;
 }
 .gnElements {
-    float: left;
+    position: relative;
     width: auto;
 }
 .gnTitle {
-    padding: 1rem;
+    padding: 1vw;
+    font-size: 2.5vw;
 }
 .gnCaption {
-    padding: 0 1rem;
+    padding: 0 1vw 1vw 1vw;
+    font-size: 1.5vw;
+}
+.pPlace {
+    color: rgb(133, 166, 255);
+    float: left;
+}
+.pDate {
+    float: right;
+}
+.pImg {
+    position: relative;
+    width: 100%;
+    border-radius: 0.3vw;
+}
+.pElements {
+    position: relative;
+    width: auto;
+}
+.pTitle {
+    padding: 1vw;
+    font-size: 1vw;
+}
+footer {
+    width: 100%;
+    bottom: 0;
+    background-color: rgb(12, 12, 12);
 }
